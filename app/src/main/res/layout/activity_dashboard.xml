@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d4">
+
+    <!-- Header View -->
+    <View
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="#FF478477"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- RecyclerView for Dynamic Buttons -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/customNavigationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Custom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/customNavigationBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:padding="20sp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Home button description"
+            android:background="@drawable/button_outline"/>
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_person_24"
+            android:padding="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile button description"
+            android:background="@drawable/button_outline"/>
+    </LinearLayout>
+
+    <!-- Icon -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

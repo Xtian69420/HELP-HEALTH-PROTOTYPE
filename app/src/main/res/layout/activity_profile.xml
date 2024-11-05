@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d14">
+
+    <View
+        android:id="@+id/header1"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="#FF478477"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/customNavigationBar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintTop_toBottomOf="@id/header1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/homeButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:padding="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Home button description"
+            android:background="@drawable/button_outline"/>
+
+        <ImageView
+            android:id="@+id/profileButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_person_24"
+            android:padding="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile button description"
+            android:background="@drawable/button_outline"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header1"
+        app:layout_constraintEnd_toEndOf="@+id/header1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon" />
+
+    <ImageView
+        android:id="@+id/profilepic"
+        android:layout_width="159dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header1"
+        app:srcCompat="@drawable/malepic" />
+
+    <TextView
+        android:id="@+id/fullname"
+        android:layout_width="282dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="Firstname Lastname"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilepic" />
+
+    <!-- Line under Fullname -->
+    <View
+        android:id="@+id/line1"
+        android:layout_width="282dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullname" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="282dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Male"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <!-- Line under Gender -->
+    <View
+        android:id="@+id/line2"
+        android:layout_width="282dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="282dp"
+        android:layout_height="34dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="samplemail@gmail.com"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="282dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="66dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#478377"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_logout_24" />
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Log-out"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/customNavigationBar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

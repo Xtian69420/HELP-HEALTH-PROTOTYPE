@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-1dp"
+    tools:layout_editor_absoluteY="53dp"
+    android:background="@drawable/d10">
+
+    <!-- Navigation Header -->
+    <View
+        android:id="@+id/header1"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="#FF478477"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bold Text Header -->
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="IN-KIND DONATION"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header1" />
+
+    <!-- Normal Description Text -->
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="An in-kind donation is a non-cash gift made to a nonprofit organization, including goods, services, time, and expertise."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <!-- Gift Input Field -->
+    <TextView
+        android:id="@+id/giftLabel"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Gift:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
+
+    <!-- Name or Nickname Input Field -->
+
+    <!-- Navigation Buttons -->
+
+    <EditText
+        android:id="@+id/giftInput"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="e.g. (Clothes, Foods, Furnitures, etc)"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giftLabel" />
+
+    <EditText
+        android:id="@+id/nameOfDonator"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your name or nickname"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Name or Nickname:"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/giftInput" />
+
+    <LinearLayout
+        android:id="@+id/customNavigationBar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameOfDonator"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/homeButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_outline"
+            android:clickable="true"
+            android:contentDescription="Home button description"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="20dp"
+            android:src="@drawable/baseline_home_24" />
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/profileButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_outline"
+            android:clickable="true"
+            android:contentDescription="Profile button description"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="20dp"
+            android:src="@drawable/baseline_person_24" />
+    </LinearLayout>
+
+    <!-- Icon Image -->
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header1"
+        app:layout_constraintEnd_toEndOf="@+id/header1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/header1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon" />
+
+    <Button
+        android:id="@+id/buttonDonate"
+        android:layout_width="121dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="#478377"
+        android:text="DONATE!"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/customNavigationBar1"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

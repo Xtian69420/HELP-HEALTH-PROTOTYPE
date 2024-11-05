@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d9">
+
+    <!-- Navigation Header -->
+    <View
+        android:id="@+id/navigationHeader"
+        android:layout_width="0dp"
+        android:layout_height="82dp"
+        android:background="#FF478477"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Add Header Text -->
+
+    <!-- Add Description -->
+
+    <!-- Add Bold Description -->
+
+    <!-- Navigation Buttons -->
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Sample Hospital Name"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigationHeader" />
+
+    <TextView
+        android:id="@+id/descriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Description: The East Avenue Medical Center is a 600-bed, tertiary, general hospital under the Department of Health."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boldDescriptionText" />
+
+    <TextView
+        android:id="@+id/boldDescriptionText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Location: East Avenue, Diliman, Quezon City Philippines 1100"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+
+    <LinearLayout
+        android:id="@+id/customNavigationBar1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintTop_toBottomOf="@id/boldDescriptionText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Home Button -->
+        <ImageView
+            android:id="@+id/homeButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_home_24"
+            android:padding="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Home button description"
+            android:background="@drawable/button_outline"/>
+
+        <!-- Profile Button -->
+        <ImageView
+            android:id="@+id/profileButton1"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_person_24"
+            android:padding="20dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:contentDescription="Profile button description"
+            android:background="@drawable/button_outline"/>
+    </LinearLayout>
+
+    <!-- Icon Image -->
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="75dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/navigationHeader"
+        app:layout_constraintEnd_toEndOf="@+id/navigationHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/navigationHeader"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon" />
+
+    <!-- Icon Image for Inkind Button -->
+
+    <!-- Icon Image for Cash Button -->
+
+    <!-- Inkind Button -->
+
+    <!-- Text for Inkind Button -->
+
+    <ImageButton
+        android:id="@+id/inkind"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="#478377"
+        android:scaleType="fitCenter"
+        android:src="@drawable/giftbox2"
+
+        app:layout_constraintBottom_toTopOf="@+id/cash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cash"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="116dp"
+        android:backgroundTint="#478277"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cashbox2"
+
+        app:layout_constraintBottom_toTopOf="@+id/customNavigationBar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/inkindText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate by In-kind Donation"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/inkind"
+        app:layout_constraintStart_toStartOf="@+id/inkind"
+        app:layout_constraintEnd_toEndOf="@+id/inkind"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Cash Button -->
+
+    <!-- Text for Cash Button -->
+
+    <TextView
+        android:id="@+id/cashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate by Money"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/cash"
+        app:layout_constraintStart_toStartOf="@+id/cash"
+        app:layout_constraintEnd_toEndOf="@+id/cash"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

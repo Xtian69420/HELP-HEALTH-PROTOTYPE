@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#CC8F8137"/> <!-- Background color when pressed with 80% transparency -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#CCD1D1D1"/> <!-- Default background color with 80% transparency -->
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

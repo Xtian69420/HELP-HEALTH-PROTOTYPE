@@ -1,0 +1,9 @@
+<!-- res/drawable/bg3_with_overlay.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg3"/>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80FFFFFF"/> <!-- Set the alpha value (E6) for 90% transparency with white color -->
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,148 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d3"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registerCardView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="#CCFFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="207dp"
+                android:layout_height="95dp"
+                android:gravity="center"
+                android:text="REGISTER"
+                android:textColor="#478377"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:background="@drawable/rounded_edittext_bg"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#424242" />
+
+            <EditText
+                android:id="@+id/fullName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:autofillHints=""
+                android:background="@drawable/rounded_edittext_bg"
+                android:hint="Firstname Lastname: (Juan Dela Cruz)"
+                android:inputType="text"
+                android:textColorHint="#424242" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:autofillHints=""
+                    android:background="@drawable/rounded_edittext_bg"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColorHint="#424242" />
+
+                <!-- Password Toggle ImageView -->
+                <ImageView
+                    android:id="@+id/passwordToggle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignTop="@id/password"
+                    android:layout_alignEnd="@id/password"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/eyeclose" />
+
+            </RelativeLayout>
+
+            <!-- RadioGroup for gender -->
+            <RadioGroup
+                android:id="@+id/genderRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Male"
+                    android:onClick="checkButton"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Female"
+                    android:onClick="checkButton"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <!-- Add the "Already have an account?" text here -->
+            <TextView
+                android:layout_marginTop="30dp"
+                android:id="@+id/tosignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/already_have_an_account_login_here"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/signUpButtn"
+        android:layout_width="116dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#478477"
+        android:text="@string/sign_up"
+        android:onClick="onClickSignUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerCardView"
+        app:layout_constraintVertical_bias="0.527" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
